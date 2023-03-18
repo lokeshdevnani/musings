@@ -1,11 +1,11 @@
 {
-  "title": "Blog by John Doe",
-  "url": "https://lumen.alxshelepenok.com",
-  "subtitle": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+  "title": "Lokesh Devnani | Musings and Ramblings",
+  "url": "https://lokesh.me",
+  "subtitle": "Engineering, software, musings and ramblings",
   "copyright": "© All rights reserved.",
   "googleAnalyticsId": "UA-73379983-2",
   "disqusShortname": "",
-  "postsLimit": 4,
+  "postsLimit": 5,
   "pathPrefix": "/",
   "menu": [
     {
@@ -17,31 +17,37 @@
       "path": "/pages/about"
     },
     {
+      "label": "Now",
+      "path": "/pages/now"
+    },
+    {
       "label": "Contact me",
       "path": "/pages/contacts"
     }
   ],
   "author": {
-    "name": "John Doe",
+    "name": "Lokesh Devnani",
     "photo": "/photo.jpg",
-    "bio": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+    "bio": "Lokesh is a software engineer with a knack of building scalable software systems. He spends his free time dancing & contributing to this blog.",
+    "resumeUrl": "https://drive.google.com/file/d/10ZwDW1EMjnPAA9UgaqcWLjsiRsZD6-M6/view?usp=sharing",
     "contacts": {
       "rss": "",
       "email": "",
-      "github": "#",
-      "facebook": "#",
-      "telegram": "#",
-      "twitter": "#",
-      "linkedin": "#",
-      "instagram": "#",
-      "mastodon": "#",
+      "github": "lokeshdevnani",
+      "facebook": "devnani.lokesh",
+      "telegram": "",
+      "twitter": "lokeshdevnani",
+      "linkedin": "lokeshdevnani",
+      "instagram": "lokeshdevnani",
+      "mastodon": "",
       "line": "",
       "weibo": "",
       "gitlab": "",
       "medium": "",
       "youtube": "",
       "codepen": "",
-      "soundcloud": ""
+      "soundcloud": "lokeshdevnani",
+      "hackerrank": "lokeshdevnani"
     }
-  }
+  } 
 }

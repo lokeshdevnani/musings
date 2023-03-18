@@ -1,13 +1,17 @@
 ---
-title: "About me"
 template: "page"
-socialImage: "./notebook.jpg"
+title: About Me
+menuTitle: /about
 ---
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+Hi, I'm Lokesh Devnani. I'm a software engineer deeply passionate about problem solving, technology & startups.
 
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](/notebook.jpg)
+Hacker at heart, I fancy well-engineered solutions built with good design and clean coding principles deployed at scale. I'm currently working with [Udaan](https://udaan.com/), where we are building a full-stack B2B e-commerce platform, presently serving all across India with an annualized GMV of 2+ billion USD.
 
-_Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi._
+![Lokesh Devnani](./lokesh.jpeg)
 
-Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+I'm an inquisitive netizen with an insatiable appetite to learn about a wide range of subjects and expanding my worldview with the courage to suck at something new every time. Also, I'm very passionate about dancing - especially [contemporary movement](https://www.youtube.com/watch?v=annMIqJfCVk) & [hip-hop](https://www.wikiwand.com/en/Hip-hop_dance). It's fascinating to explore what various forms of music can do to our bodies. Apart from that, I find myself surfing interwebs, tinkering, reading, or lost in deep thoughts.
+
+See [/now](/now) for more on what I'm busy doing these days. Carpe Diem.
+
+I love to talk about tech, hip-hop, health, computer science, startups, economics, finance, philosophy, and pretty much anything worth discussing. If you feel like discussing some ideas or just hanging out sometime, get in [touch](/contact).
