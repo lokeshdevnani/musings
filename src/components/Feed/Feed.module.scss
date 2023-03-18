@@ -3,17 +3,38 @@
 
 .feed {
   .item {
-    @include margin-bottom(1.25);
+    @include margin-bottom(1);
+    @include padding-bottom(1); 
+    border-bottom: 1px dotted #EEE;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 
     &:last-child {
       @include margin-bottom(0.5);
     }
 
+    .imgContainer {
+      align-items: center;
+      border-radius: 10px;
+      display: flex;
+      flex-shrink: 0;
+      justify-content: center;
+      margin-right: 20px;
+      max-height: 132px;
+      overflow: hidden;
+      width: 150px;
+    }
+
+    .titleContainer {
+      flex-grow: 0;
+    }
+
     .title {
-      font-size: $typographic-base-font-size * 1.6875;
-      @include line-height(1.5);
+      font-size: $typographic-base-font-size * 1.5;
+      @include line-height(1.2);
       @include margin-top(0);
-      @include margin-bottom(0.5);
+      @include margin-bottom(0.3);
 
       .link {
         color: var(--color-typographic-base-font);
@@ -24,6 +45,14 @@
           color: var(--color-typographic-base-font);
         }
       }
+    }
+
+    .subTitle {
+      font-size: $typographic-base-font-size * 1.3;
+      font-weight: 300;
+      @include line-height(1.2);
+      @include margin-top(0);
+      @include margin-bottom(0);
     }
 
     .description {
