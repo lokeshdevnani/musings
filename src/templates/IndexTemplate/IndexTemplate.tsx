@@ -52,11 +52,16 @@ export const query = graphql`query IndexTemplate($limit: Int!, $offset: Int!) {
         fields {
           categorySlug
           slug
+          date
         }
         frontmatter {
           description
           category
           title
+          subTitle
+          cover {
+            absolutePath
+          }
           date
           slug
         }

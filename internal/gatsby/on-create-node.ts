@@ -16,17 +16,16 @@ const onCreateNode: GatsbyNode["onCreateNode"] = ({
     const { frontmatter, parent }: types.Edge["node"] = node;
     const { tags, category, slug } = frontmatter || {};
 
-    if (slug) {
-      const dirname = parent && getNode(parent)?.relativeDirectory;
-      const value =
-        typeof dirname === "string"
-          ? utils.concat("/", dirname, "/", slug)
-          : utils.concat("/", slug);
-
-      createNodeField({ node, name: "slug", value });
+    const fileSlug = createFilePath({ node, getNode });
+    const parts = fileSlug.split("--")
+    if (parts.length > 1) {
+      const titleSlug = parts[1]
+      const date = parts[0].split('/')[parts[0].split('/').length - 1]
+      createNodeField({ node, name: 'slug', value: "/" + titleSlug })
+      createNodeField({ node, name: 'date', value: date })
     } else {
       const value = createFilePath({ node, getNode });
-      createNodeField({ node, name: "slug", value });
+      createNodeField({ node, name: "slug", value: value });
     }
 
     if (tags) {

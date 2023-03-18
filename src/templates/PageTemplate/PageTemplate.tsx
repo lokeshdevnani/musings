@@ -54,11 +54,11 @@ export const Head: React.FC<Props> = ({ data }) => {
     frontmatter: {
       title: pageTitle,
       description: pageDescription = "",
-      socialImage,
+      cover
     },
   } = data.markdownRemark;
   const description = pageDescription || subtitle;
-  const image = socialImage?.publicURL && url.concat(socialImage?.publicURL);
+  const image = url.concat(cover);
 
   return (
     <Meta

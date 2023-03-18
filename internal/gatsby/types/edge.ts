@@ -7,6 +7,9 @@ interface Frontmatter {
   category?: string;
   description?: string;
   tags?: Array<string>;
+  cover: {
+    absolutePath: string
+  }
 }
 
 interface Fields {

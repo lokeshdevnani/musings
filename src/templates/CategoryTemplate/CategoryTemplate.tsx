@@ -59,6 +59,10 @@ export const query = graphql`query CategoryTemplate($group: String, $limit: Int!
           title
           date
           slug
+          subTitle
+          cover {
+            absolutePath
+          }
         }
       }
     }

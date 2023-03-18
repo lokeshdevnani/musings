@@ -64,6 +64,10 @@ export const query = graphql`query TagTemplate($group: String, $limit: Int!, $of
           category
           description
           slug
+          subTitle
+          cover {
+            absolutePath
+          }
         }
       }
     }

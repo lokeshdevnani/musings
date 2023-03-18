@@ -81,6 +81,10 @@ export default {
           title
           slug
           description
+          subTitle
+          cover {
+            absolutePath
+          }
         }
       }
     }

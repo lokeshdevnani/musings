@@ -19,7 +19,7 @@ interface Props {
 const Post: React.FC<Props> = ({ post }: Props) => {
   const { html } = post;
   const { tagSlugs, slug } = post.fields;
-  const { tags, title, date } = post.frontmatter;
+  const { tags, title, date, subTitle } = post.frontmatter;
 
   return (
     <div className={styles.post}>
@@ -29,7 +29,7 @@ const Post: React.FC<Props> = ({ post }: Props) => {
       </div>
 
       <div className={styles.content}>
-        <Content body={html} title={title} />
+        <Content body={html} title={title} subTitle={subTitle} />
       </div>
 
       <div className={styles.footer}>
