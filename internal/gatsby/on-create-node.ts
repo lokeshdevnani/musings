@@ -14,9 +14,10 @@ const onCreateNode: GatsbyNode["onCreateNode"] = ({
 
   if (node.internal.type === "MarkdownRemark") {
     const { frontmatter, parent }: types.Edge["node"] = node;
-    const { tags, category, slug } = frontmatter || {};
+    const { tags, category } = frontmatter || {};
 
     const fileSlug = createFilePath({ node, getNode });
+    const fileSlugWithoutTrailingSlash = fileSlug.endsWith('/') ? fileSlug.slice(0, -1) : fileSlug;
     const parts = fileSlug.split("--")
     if (parts.length > 1) {
       const titleSlug = parts[1]
@@ -24,8 +25,8 @@ const onCreateNode: GatsbyNode["onCreateNode"] = ({
       createNodeField({ node, name: 'slug', value: "/" + titleSlug })
       createNodeField({ node, name: 'date', value: date })
     } else {
-      const value = createFilePath({ node, getNode });
-      createNodeField({ node, name: "slug", value: value });
+      const titleSlug = fileSlugWithoutTrailingSlash.split('/')[fileSlugWithoutTrailingSlash.split('/').length - 1]
+      createNodeField({ node, name: "slug", value: titleSlug });
     }
 
     if (tags) {

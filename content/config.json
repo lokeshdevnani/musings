@@ -15,15 +15,11 @@
     },
     {
       "label": "About me",
-      "path": "/pages/about"
+      "path": "/about"
     },
     {
       "label": "Now",
-      "path": "/pages/now"
-    },
-    {
-      "label": "Contact me",
-      "path": "/pages/contacts"
+      "path": "/now"
     }
   ],
   "author": {
