@@ -15,6 +15,7 @@ export default {
     copyright: config.copyright,
     postsLimit: config.postsLimit,
     disqusShortname: config.disqusShortname,
+    facebookAppId: config.facebookAppId
   },
   plugins: [
     {

@@ -80,7 +80,8 @@
     "gatsby-transformer-sharp": "^5.7.0",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-facebook": "^9.0.12"
   },
   "devDependencies": {
     "@alxshelepenok/eslint-config": "^1.0.201",

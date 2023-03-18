@@ -1,8 +1,9 @@
 import React from "react";
 
-import { DiscussionEmbed } from "disqus-react";
+import { FacebookProvider, Comments as FacebookComments } from "react-facebook";
 
-import { useSiteMetadata } from "@/hooks";
+
+import { useSiteMetadata, useTheme } from "@/hooks";
 
 interface Props {
   postTitle: string;
@@ -10,22 +11,18 @@ interface Props {
 }
 
 const Comments: React.FC<Props> = ({ postTitle, postSlug }: Props) => {
-  const { url, disqusShortname } = useSiteMetadata();
-
-  if (!disqusShortname) {
-    return null;
-  }
+  const { url, facebookAppId } = useSiteMetadata();
+  const [{ mode }] = useTheme();
 
   return (
-    <DiscussionEmbed
-      shortname={disqusShortname}
-      config={{
-        url: url + postSlug,
-        identifier: postTitle,
-        title: postTitle,
-      }}
-    />
-  );
+    <FacebookProvider appId={facebookAppId}>
+        <FacebookComments
+          href={`${url}${postSlug}`}
+          width="100%"
+          colorScheme={mode}
+        />
+      </FacebookProvider>
+  )
 };
 
 export default Comments;

@@ -5,7 +5,7 @@
   .item {
     @include margin-bottom(1);
     @include padding-bottom(1); 
-    border-bottom: 1px dotted #EEE;
+    border-bottom: 1px dotted #CCC;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -23,7 +23,7 @@
       margin-right: 20px;
       max-height: 132px;
       overflow: hidden;
-      width: 150px;
+      width: 80px;
     }
 
     .titleContainer {
@@ -31,8 +31,8 @@
     }
 
     .title {
-      font-size: $typographic-base-font-size * 1.5;
-      @include line-height(1.2);
+      font-size: $typographic-base-font-size * 1.3;
+      @include line-height(1);
       @include margin-top(0);
       @include margin-bottom(0.3);
 
@@ -48,9 +48,9 @@
     }
 
     .subTitle {
-      font-size: $typographic-base-font-size * 1.3;
+      font-size: $typographic-base-font-size * 1.2;
       font-weight: 300;
-      @include line-height(1.2);
+      @include line-height(1.1);
       @include margin-top(0);
       @include margin-bottom(0);
     }
@@ -96,6 +96,24 @@
       &:focus {
         border-bottom: 1px solid $color-blue;
         color: var(--color-primary);
+      }
+    }
+  }
+
+  @include breakpoint-sm {
+    .item {
+      .title {
+        font-size: $typographic-base-font-size * 1.5;
+        @include line-height(1.2);
+      }
+
+      .subTitle {
+        font-size: $typographic-base-font-size * 1.3;
+        @include line-height(1.1);
+      }  
+
+      .imgContainer {
+        width: 150px;
       }
     }
   }

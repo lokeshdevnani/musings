@@ -3,8 +3,9 @@
   "url": "https://lokesh.me",
   "subtitle": "Engineering, software, musings and ramblings",
   "copyright": "© All rights reserved.",
-  "googleAnalyticsId": "UA-73379983-2",
+  "googleAnalyticsId": "UA-73294953-2",
   "disqusShortname": "",
+  "facebookAppId": "295839891027681",
   "postsLimit": 5,
   "pathPrefix": "/",
   "menu": [
