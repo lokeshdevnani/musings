@@ -1,0 +1,32 @@
+#lokesh-logo #a-left-top, #lokesh-logo #a-left-bottom, #lokesh-logo #slash, #lokesh-logo #a-right {
+    transform: rotate(0deg) translateX(0) translateY(0);
+    transform-origin: 50% 50%;
+    transition: all 0.5s ease-out; }
+  
+  #lokesh-logo:hover #a-left-top {
+    -webkit-transform: rotate(-60deg) translateY(8px) translateX(-30px);
+    transform: rotate(-60deg) translateY(-60px) translateX(100px); }
+  
+  #lokesh-logo:hover #a-left-bottom {
+    -webkit-transform: rotate(-30deg) translateY(55px) translateX(30px);
+    transform: rotate(-30deg) translateY(0px) translateX(50px); }
+  
+  #lokesh-logo:hover #slash {
+    -webkit-transform: rotate(-22deg) translateX(45px) translateY(20px);
+    transform: rotate(-22deg) translateX(45px) translateY(20px); }
+  
+  #lokesh-logo:hover #a-right {
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-30px); }
+  
+  #lokesh-logo:hover #a-right polygon {
+    fill: #EF0044; }
+  
+  #lokesh-logo:hover #a-left-top, #lokesh-logo:hover #a-left-bottom, #lokesh-logo:hover #slash, #lokesh-logo:hover #a-right {
+    transform-origin: 50% 50%;
+    transition: all 0.5s ease-out;
+  }
+  
+  #lokesh-logo {
+    max-width: 250px;
+  }
