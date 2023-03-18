@@ -28,6 +28,7 @@ export const query = graphql`
       fields {
         slug
         tagSlugs
+        date
       }
       frontmatter {
         date

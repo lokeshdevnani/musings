@@ -63,7 +63,6 @@ export const query = graphql`query IndexTemplate($limit: Int!, $offset: Int!) {
             absolutePath
           }
           date
-          slug
         }
       }
     }

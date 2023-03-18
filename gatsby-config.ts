@@ -58,10 +58,10 @@ export default {
                 description: node?.frontmatter?.description,
                 url:
                   site.siteMetadata.url +
-                  (node.frontmatter?.slug || node.fields?.slug),
+                  (node.fields?.slug),
                 guid:
                   site.siteMetadata.url +
-                  (node.frontmatter?.slug || node.fields?.slug),
+                  (node.fields?.slug),
                 custom_elements: [{ "content:encoded": node.html }],
               })),
             query: `{
@@ -79,7 +79,6 @@ export default {
         frontmatter {
           date
           title
-          slug
           description
           subTitle
           cover {

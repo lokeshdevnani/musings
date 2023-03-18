@@ -18,8 +18,9 @@ interface Props {
 
 const Post: React.FC<Props> = ({ post }: Props) => {
   const { html } = post;
-  const { tagSlugs, slug } = post.fields;
-  const { tags, title, date, subTitle } = post.frontmatter;
+  const { tagSlugs, slug, date: fieldsDate } = post.fields;
+  const { tags, title, date: fmDate, subTitle } = post.frontmatter;
+  const date = fmDate || fieldsDate
 
   return (
     <div className={styles.post}>

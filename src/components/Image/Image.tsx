@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import { graphql, StaticQuery } from "gatsby";
+import { graphql, StaticQuery, useStaticQuery } from "gatsby";
 import {
   GatsbyImage,
   GatsbyImageProps,
@@ -24,9 +24,8 @@ interface Data {
   };
 }
 
-const Image: FC<Props> = ({ path, ...rest }: Props) => (
-  <StaticQuery
-    query={graphql`
+const Image: FC<Props> = ({ path, ...rest }: Props) => {
+  const data: Data = useStaticQuery(graphql`
       query {
         images: allFile(
           filter: { ext: { regex: "/png|jpg|jpeg|webp|tif|tiff/" } }
@@ -41,22 +40,20 @@ const Image: FC<Props> = ({ path, ...rest }: Props) => (
           }
         }
       }
-    `}
-    render={(data: Data) => {
-      const { images: { edges = [] } = {} } = data;
-      const image = edges.find(({ node }) => node.absolutePath.includes(path));
+    `)
+    
+    const { images: { edges = [] } = {} } = data;
+    const image = edges.find(({ node }) => node.absolutePath.includes(path));
+    
+    if (!image) {
+      return null;
+    }
 
-      if (!image) {
-        return null;
-      }
+    const {
+      node: { childImageSharp },
+    } = image;
 
-      const {
-        node: { childImageSharp },
-      } = image;
-
-      return <GatsbyImage {...rest} image={childImageSharp.gatsbyImageData} />;
-    }}
-  />
-);
+    return <GatsbyImage {...rest} image={childImageSharp.gatsbyImageData} />;
+  }
 
 export default Image;

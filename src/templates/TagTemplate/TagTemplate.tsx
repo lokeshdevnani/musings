@@ -57,13 +57,13 @@ export const query = graphql`query TagTemplate($group: String, $limit: Int!, $of
         fields {
           slug
           categorySlug
+          date
         }
         frontmatter {
           title
           date
           category
           description
-          slug
           subTitle
           cover {
             absolutePath

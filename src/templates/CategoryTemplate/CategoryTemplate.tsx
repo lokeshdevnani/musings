@@ -52,13 +52,13 @@ export const query = graphql`query CategoryTemplate($group: String, $limit: Int!
         fields {
           slug
           categorySlug
+          date
         }
         frontmatter {
           description
           category
           title
           date
-          slug
           subTitle
           cover {
             absolutePath
