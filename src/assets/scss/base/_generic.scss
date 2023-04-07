@@ -25,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $typographic-font-family;
+  font-family: $typographic-font-family-header;
   font-weight: 600;
 }
 
@@ -38,7 +38,7 @@ h1 {
 }
 
 h2 {
-  font-family: $typographic-font-family-secondary;
+  --font-family: $typographic-font-family-secondary;
   font-size: $typographic-base-font-size * 1.6875;
   @include line-height(1.5);
   @include margin-top(1.6);
