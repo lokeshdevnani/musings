@@ -48,6 +48,7 @@
     }
 
     .subTitle {
+      font-family: $typographic-font-family-secondary;
       font-size: $typographic-base-font-size * 1.2;
       font-weight: 300;
       @include line-height(1.1);
@@ -108,7 +109,6 @@
       }
 
       .subTitle {
-        font-family: $typographic-font-family-secondary;
         font-size: $typographic-base-font-size * 1.3;
         @include line-height(1.1);
       }  
