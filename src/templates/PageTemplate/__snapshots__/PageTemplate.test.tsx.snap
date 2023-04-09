@@ -32,14 +32,14 @@ exports[`PageTemplate renders correctly 1`] = `
           </li>
           <li>
             <a
-              href="/pages/about"
+              href="/about"
             >
               About Me
             </a>
           </li>
           <li>
             <a
-              href="/pages/contacts"
+              href="/contact"
             >
               Contact Me
             </a>

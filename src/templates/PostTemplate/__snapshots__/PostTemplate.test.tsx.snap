@@ -49,7 +49,17 @@ exports[`PostTemplate renders correctly 1`] = `
         </p>
       </div>
     </div>
-    <div />
+    <div>
+      <div>
+        <div
+          className="fb-comments"
+          data-colorscheme="light"
+          data-href="https://www.lumen.local/posts/perfecting-the-art-of-perfection"
+          data-skin="light"
+          data-width="100%"
+        />
+      </div>
+    </div>
   </div>
 </div>
 `;
