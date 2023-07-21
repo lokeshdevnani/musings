@@ -22,6 +22,10 @@
       "path": "/now"
     },
     {
+      "label": "Talks",
+      "path": "/talks"
+    },
+    {
       "label": "Contact Me",
       "path": "/contact"
     }
