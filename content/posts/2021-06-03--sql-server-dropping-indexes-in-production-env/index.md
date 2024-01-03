@@ -12,7 +12,7 @@ tags:
 description: "Under the hood of dropping an index and the locking mechanism. It also talks about how you can delete indexes safely."
 ---
 
-We analyzed and compiled a list of unused indexes in our SQL database in [Part one](/sql-server-unused-indexes) of removing unused indexes from SQL server. 
+We analyzed and compiled a list of unused indexes in our SQL database in [Part one](/sql-server-unused-indexes/) of removing unused indexes from SQL server. 
 
 So, let's just run the `DROP INDEX` query and be done with it. Right?
 

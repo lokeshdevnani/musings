@@ -12,6 +12,6 @@ Hacker at heart, I fancy well-engineered solutions built with good design and cl
 
 I'm an inquisitive netizen with an insatiable appetite to learn about a wide range of subjects and expanding my worldview with the courage to suck at something new every time. Also, I'm very passionate about dancing - especially [contemporary movement](https://www.youtube.com/watch?v=annMIqJfCVk) & [hip-hop](https://www.wikiwand.com/en/Hip-hop_dance). It's fascinating to explore what various forms of music can do to our bodies. Apart from that, I find myself surfing interwebs, tinkering, reading, or lost in deep thoughts.
 
-See [/now](/now) for more on what I'm busy doing these days. Carpe Diem.
+See [/now](/now/) for more on what I'm busy doing these days. Carpe Diem.
 
 I love to talk about tech, hip-hop, health, computer science, startups, economics, finance, philosophy, and pretty much anything worth discussing. If you feel like discussing some ideas or just hanging out sometime, get in [touch](/contact).
