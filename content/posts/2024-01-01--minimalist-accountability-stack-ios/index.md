@@ -125,6 +125,8 @@ For 21 weeks, I consistently logged at least 5 workouts weekly. Despite travel, 
 
 Lethargy or lack of time? A quick 10-minute workout with burpees and pushups. No equipment? Plyo squats, lunges, and pushups. An elbow injury? Bodyweight exercises. And when something new and challenging came up, I dove in. I tried yoga, aerial silk, capoeira, acroyoga, contemporary dance, butoh, running just to name a few.
 
+![Diversity of workout 2023](./collage.jpg)
+
 This journey wasn't just about physical fitness. It was a transformative experience that boosted my energy levels - a significant win given my hypothyroidism. It wasn’t about tracking macros but making mindful eating choices.
 
 The biggest gains were mental. This journey dissolved my self-doubt, bolstering my self-confidence and belief in my capabilities. It became a blueprint for tackling tough challenges, staying consistent, and ticking off to-do lists. It shaped a new, resilient me.
