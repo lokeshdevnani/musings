@@ -155,9 +155,9 @@ exports[`TagTemplate renders correctly 1`] = `
             <div>
               <div>
                 <time
-                  dateTime="Invalid Date"
+                  dateTime="September 1, 2016"
                 >
-                  Invalid Date
+                  September 2016
                 </time>
                 <span />
                 <span>
@@ -183,9 +183,9 @@ exports[`TagTemplate renders correctly 1`] = `
             <div>
               <div>
                 <time
-                  dateTime="Invalid Date"
+                  dateTime="September 1, 2016"
                 >
-                  Invalid Date
+                  September 2016
                 </time>
                 <span />
                 <span>
@@ -211,9 +211,9 @@ exports[`TagTemplate renders correctly 1`] = `
             <div>
               <div>
                 <time
-                  dateTime="Invalid Date"
+                  dateTime="September 1, 2017"
                 >
-                  Invalid Date
+                  September 2017
                 </time>
                 <span />
                 <span>
