@@ -4,7 +4,7 @@ title: When the World Becomes My Studio
 subTitle: 30 days of movement improvisation journey across landscapes
 cover: cover.png
 category: "dance"
-date: "2025-10-04T22:00:00.000Z"
+date: "2025-10-18T22:00:00.000Z"
 tags:
   - "self-improvement"
   - "essay"
