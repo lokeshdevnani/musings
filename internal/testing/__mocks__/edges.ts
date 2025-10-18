@@ -5,6 +5,7 @@ export default [
       fields: {
         slug: "/posts/perfecting-the-art-of-perfection",
         categorySlug: "/typography",
+        date: "2016-09-01T00:00:00.000Z",
       },
       frontmatter: {
         date: "2016-09-01",
@@ -23,6 +24,7 @@ export default [
       fields: {
         slug: "/posts/the-birth-of-movable-type",
         categorySlug: "/design-inspiration",
+        date: "2016-09-01T00:00:00.000Z",
       },
       frontmatter: {
         date: "2016-09-01",
@@ -42,6 +44,7 @@ export default [
       fields: {
         slug: "/posts/humane-typography-in-the-digital-age",
         categorySlug: "/typography",
+        date: "2017-09-01T00:00:00.000Z",
       },
       frontmatter: {
         date: "2017-09-01",

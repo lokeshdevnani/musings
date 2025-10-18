@@ -42,7 +42,7 @@ const Image: FC<Props> = ({ path, ...rest }: Props) => {
       }
     `)
     
-    const { images: { edges = [] } = {} } = data;
+    const edges = data?.images?.edges ?? [];
     const image = edges.find(({ node }) => node.absolutePath.includes(path));
     
     if (!image) {
