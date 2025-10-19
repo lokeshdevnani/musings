@@ -11,6 +11,7 @@ const useSiteMetadata = () => {
             title
             photo
             description
+            resumeUrl
             contacts {
               name
               contact
@@ -24,12 +25,15 @@ const useSiteMetadata = () => {
           title
           copyright
           description
+          subtitle
+          facebookAppId
+          feedLimit
         }
       }
     }
   `);
 
-  return site?.siteMetadata || {};
+  return (site?.siteMetadata ?? {}) as SiteMetadata["site"]["siteMetadata"];
 };
 
 export { useSiteMetadata };

@@ -1,37 +1,68 @@
 {
-  "title": "Blog by John Doe",
-  "url": "https://lumen.alxshelepenok.com",
-  "description": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+  "title": "Lokesh Devnani | Musings and Ramblings",
+  "url": "https://lokesh.me",
+  "description": "Engineering, software, musings and ramblings",
+  "subtitle": "Engineering, software, musings and ramblings",
   "copyright": "© All rights reserved.",
-  "googleAnalyticsId": "G-MSQGQG14PK",
+  "googleAnalyticsId": "UA-73294953-2",
+  "facebookAppId": "295839891027681",
   "pathPrefix": "/",
-  "feedLimit": 4,
+  "feedLimit": 5,
   "menu": [
     {
       "title": "Articles",
       "url": "/"
     },
     {
-      "title": "About me",
-      "url": "/pages/about"
+      "title": "About",
+      "url": "/about"
     },
     {
-      "title": "Contact me",
-      "url": "/pages/contacts"
+      "title": "Now",
+      "url": "/now"
+    },
+    {
+      "title": "Talks",
+      "url": "/talks"
+    },
+    {
+      "title": "Contact",
+      "url": "/contact"
     }
   ],
   "author": {
-    "title": "John Doe",
-    "photo": "/logo.png",
-    "description": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+    "title": "Lokesh Devnani",
+    "photo": "/photo.jpg",
+    "description": "Lokesh is a software engineer with a knack of building scalable software systems. He spends his free time dancing & contributing to this blog.",
+    "resumeUrl": "https://drive.google.com/file/d/10ZwDW1EMjnPAA9UgaqcWLjsiRsZD6-M6/view?usp=sharing",
     "contacts": [
       {
+        "name": "x",
+        "contact": "lokeshdevnani"
+      },
+      {
         "name": "github",
-        "contact": "alxshelepenok"
+        "contact": "lokeshdevnani"
       },
       {
         "name": "linkedin",
-        "contact": "alxshelepenok"
+        "contact": "lokeshdevnani"
+      },
+      {
+        "name": "instagram",
+        "contact": "lokeshdevnani"
+      },
+      {
+        "name": "facebook",
+        "contact": "devnani.lokesh"
+      },
+      {
+        "name": "soundcloud",
+        "contact": "lokeshdevnani"
+      },
+      {
+        "name": "rss",
+        "contact": "https://lokesh.me/rss.xml"
       }
     ]
   }

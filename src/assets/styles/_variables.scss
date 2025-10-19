@@ -1,39 +1,53 @@
 @use "sass:math";
 
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Lato:wght@900&display=swap");
+
+$color-white: hsl(0, 0%, 100%);
+$color-white-cloud: hsl(240, 1%, 92%);
+$color-dark: hsl(220, 17%, 17%);
+$color-dark-cloud: hsl(220, 17%, 30%);
+$color-dark-paper: hsl(220, 17%, 12%);
+$color-gray: hsl(220, 17%, 57%);
+$color-blue: #0e8388;
+$color-orange: #ea5455;
+
+$color-blue-hsl: hsl(182, 81%, 29%);
+$color-orange-hsl: hsl(0, 78%, 62%);
+
 $dark-color-palette: (
-  background: hsl(240, 7%, 11%),
-  foreground: hsl(240, 4%, 98%),
-  muted: hsl(240, 4%, 17%),
-  muted-foreground: hsl(240, 4%, 66%),
-  border: hsl(240, 4%, 17%),
-  primary: hsl(342, 100%, 74%),
-  primary-foreground: hsl(240, 4%, 98%),
-  secondary: hsl(240, 4%, 17%),
-  secondary-foreground: hsl(240, 4%, 98%),
-  accent: hsl(240, 4%, 17%),
-  accent-foreground: hsl(240, 4%, 98%),
-  destructive: hsl(342, 100%, 74%),
-  destructive-foreground: hsl(240, 7%, 11%),
-  positive: hsl(162, 52%, 53%),
-  positive-foreground: hsl(240, 7%, 11%),
+  background: $color-dark-paper,
+  foreground: $color-white,
+  muted: $color-dark,
+  muted-foreground: $color-gray,
+  border: $color-dark-cloud,
+  primary: $color-blue-hsl,
+  primary-foreground: $color-white,
+  secondary: $color-orange-hsl,
+  secondary-foreground: $color-white,
+  accent: $color-dark,
+  accent-foreground: $color-white,
+  destructive: $color-orange-hsl,
+  destructive-foreground: $color-dark-paper,
+  positive: $color-blue-hsl,
+  positive-foreground: $color-dark-paper,
 );
 
 $light-color-palette: (
-  background: hsl(0, 0%, 100%),
-  foreground: hsl(240, 7%, 11%),
-  muted: hsl(240, 6%, 96%),
-  muted-foreground: hsl(240, 6%, 46.1%),
-  border: hsl(240, 2%, 89%),
-  primary: hsl(342, 100%, 47%),
-  primary-foreground: hsl(240, 4%, 98%),
-  secondary: hsl(240, 6%, 96%),
-  secondary-foreground: hsl(240, 2%, 17%),
-  accent: hsl(240, 6%, 96%),
-  accent-foreground: hsl(240, 2%, 17%),
-  destructive: hsl(342, 100%, 47%),
-  destructive-foreground: hsl(240, 7%, 11%),
-  positive: hsl(162, 52%, 53%),
-  positive-foreground: hsl(240, 7%, 11%)
+  background: $color-white,
+  foreground: $color-dark,
+  muted: $color-white-cloud,
+  muted-foreground: $color-gray,
+  border: $color-white-cloud,
+  primary: $color-blue-hsl,
+  primary-foreground: $color-white,
+  secondary: $color-orange-hsl,
+  secondary-foreground: $color-white,
+  accent: $color-white-cloud,
+  accent-foreground: $color-dark,
+  destructive: $color-orange-hsl,
+  destructive-foreground: $color-white,
+  positive: $color-blue-hsl,
+  positive-foreground: $color-white
 );
 
 $typography-root-font-size: 100;
@@ -41,13 +55,15 @@ $typography-base-font-size: 16px;
 $typography-small-font-size: 14px;
 $typography-base-line-height: 1.625;
 $typography-leading: math.round(16 * math.div($typography-root-font-size, 100) * $typography-base-line-height);
-$typography-font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+$typography-font-family: "Open Sans", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+$typography-heading-font-family: "Lato", "Open Sans", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+$typography-secondary-font-family: "Open Sans", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
 
 $button-height: 40px;
 $button-border-radius: 20px;
 
 $layout-post-single-width: 945px;
-$layout-post-width: $layout-post-single-width - 305px;
+$layout-post-width: $layout-post-single-width - 205px;
 
 $layout-gap: 30px;
 $layout-width: 1070px;

@@ -36,6 +36,7 @@ export const query = graphql`
         tags
         title
         description
+        subTitle
         socialImage {
           publicURL
         }
@@ -45,12 +46,12 @@ export const query = graphql`
 `;
 
 export const Head: FC<PostTemplateProps> = ({ data }) => {
-  const { title, description, url } = useSiteMetadata();
+  const { title, description, subtitle, url } = useSiteMetadata();
 
   const {
     frontmatter: {
       title: postTitle,
-      description: postDescription = description || "",
+      description: postDescription = subtitle || description || "",
       socialImage,
     },
   } = data.markdownRemark;

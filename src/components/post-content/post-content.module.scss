@@ -7,39 +7,73 @@
   @include mixins.padding(0, 0.5);
 
   .title {
-    font-size: variables.$typography-base-font-size * 2;
+    font-size: variables.$typography-base-font-size * 1.8;
     font-weight: 600;
     margin-left: auto;
     margin-right: auto;
     max-width: variables.$layout-post-width;
-    text-align: center;
+    text-align: left;
     @include mixins.line-height(1.65);
     @include mixins.margin-top(1);
-    @include mixins.margin-bottom(0);
+    @include mixins.margin-bottom(0.5);
+  }
+
+  .subTitle {
+    font-family: variables.$typography-secondary-font-family;
+    font-size: variables.$typography-base-font-size * 1.6;
+    font-weight: 300;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: variables.$layout-post-width;
+    text-align: left;
+    @include mixins.line-height(1.4);
+    @include mixins.margin-top(0);
+    @include mixins.margin-bottom(1);
   }
 
   .body {
     figure {
       @include mixins.margin-bottom(1);
-
-      blockquote {
-        font-style: italic;
-        text-align: center;
-        @include mixins.margin-top(0);
-        @include mixins.padding(1, 0);
-
-        p {
-          font-size: variables.$typography-base-font-size * 1.6817;
-          max-width: variables.$layout-post-width;
-          @include mixins.margin-top(0);
-          @include mixins.margin-bottom(1);
-          @include mixins.line-height(1.5);
-        }
-      }
     }
 
-    a {
-      text-decoration: underline;
+    blockquote {
+      background: #ededed;
+      border-left: 8px solid variables.$color-orange;
+      box-sizing: border-box;
+      color: #555555;
+      font-style: italic;
+      line-height: 1.6;
+      margin: 50px auto;
+      padding: 1em 10px;
+      position: relative;
+
+      p {
+        font-size: variables.$typography-base-font-size * 1.2;
+        @include mixins.margin-top(0);
+        @include mixins.margin-bottom(0);
+      }
+
+      span {
+        color: #333333;
+        display: block;
+        font-style: normal;
+        font-weight: bold;
+        margin-top: 1em;
+      }
+
+      &::before {
+        color: variables.$color-orange;
+        content: \"\";
+        font-family: Arial;
+        font-size: 4em;
+        left: 10px;
+        position: absolute;
+        top: -10px;
+      }
+
+      &::after {
+        content: \"\";
+      }
     }
 
     * {
@@ -70,7 +104,13 @@
       font-size: variables.$typography-base-font-size * 3;
       @include mixins.line-height(2.25);
       @include mixins.margin-top(2.25);
-      @include mixins.margin-bottom(1.5);
+      @include mixins.margin-bottom(0.5);
+    }
+
+    .subTitle {
+      font-size: variables.$typography-base-font-size * 1.6;
+      @include mixins.line-height(1.4);
+      @include mixins.margin-bottom(1);
     }
 
     .body {

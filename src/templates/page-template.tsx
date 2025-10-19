@@ -47,12 +47,12 @@ export const query = graphql`
 `;
 
 export const Head: FC<PageTemplateProps> = ({ data }) => {
-  const { title, description, url } = useSiteMetadata();
+  const { title, description, subtitle, url } = useSiteMetadata();
 
   const {
     frontmatter: {
       title: pageTitle,
-      description: pageDescription = description || "",
+      description: pageDescription = subtitle || description || "",
       socialImage,
     },
   } = data.markdownRemark;

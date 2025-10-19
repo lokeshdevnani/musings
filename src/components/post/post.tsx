@@ -6,6 +6,7 @@ import { PostTags } from "@/components/post-tags";
 import { PostAuthor } from "@/components/post-author";
 import { PostFooter } from "@/components/post-footer";
 import { PostContent } from "@/components/post-content";
+import { PostComments } from "@/components/post-comments";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 
 import * as styles from "./post.module.scss";
@@ -16,8 +17,8 @@ interface PostProps {
 
 const Post: FC<PostProps> = ({ post }) => {
   const { html } = post;
-  const { tagSlugs } = post.fields;
-  const { tags, title, date } = post.frontmatter;
+  const { tagSlugs, slug } = post.fields;
+  const { tags, title, date, subTitle } = post.frontmatter;
 
   return (
     <div className={styles.post}>
@@ -26,13 +27,18 @@ const Post: FC<PostProps> = ({ post }) => {
         <ThemeSwitcher />
       </div>
       <div className={styles.content}>
-        <PostContent body={html} title={title} />
+        <PostContent body={html} title={title} subTitle={subTitle} />
       </div>
       <div className={styles.footer}>
         <PostFooter date={date} />
         {tags && tagSlugs && <PostTags tags={tags} tagSlugs={tagSlugs} />}
         <PostAuthor />
       </div>
+      {slug ? (
+        <div className={styles.comments}>
+          <PostComments postSlug={slug} />
+        </div>
+      ) : null}
     </div>
   );
 };

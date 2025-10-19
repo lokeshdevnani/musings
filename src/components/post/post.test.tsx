@@ -4,7 +4,7 @@ import { test, describe, expect, beforeEach, mock } from "bun:test";
 
 import * as mocks from "@/mocks";
 import { Post } from "@/components/post";
-import { createSnapshotsRenderer, renderWithCoilProvider } from "@/utils/render-with-coil-provider";
+import { renderWithCoilProvider } from "@/utils/render-with-coil-provider";
 
 const mockedUseStaticQuery = useStaticQuery as ReturnType<typeof mock>;
 const mockedStaticQuery = StaticQuery as unknown as ReturnType<typeof mock>;
@@ -15,15 +15,18 @@ describe("Post", () => {
     mockedUseStaticQuery.mockReturnValue(mocks.siteMetadata);
   });
 
-  test("renders correctly", () => {
+  test("renders post content with subtitle", () => {
     const props = { post: mocks.markdownRemark };
-    const tree = createSnapshotsRenderer(<Post {...props} />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const screen = renderWithCoilProvider(<Post {...props} />);
+
+    expect(screen.getByText("Perfecting the Art of Perfection")).toBeInTheDocument();
+    expect(screen.getByText("Beginner motivation for version control")).toBeInTheDocument();
+    expect(screen.getByText("Published Sep 1, 2016")).toBeInTheDocument();
   });
 
-  test("buttons is rendered correctly and exists", () => {
+  test("renders navigation buttons", () => {
     const props = { post: mocks.markdownRemark };
-    const el = renderWithCoilProvider(<Post {...props} />);
-    expect(el.getByText("All Articles")).toBeInTheDocument();
+    const screen = renderWithCoilProvider(<Post {...props} />);
+    expect(screen.getByText("All Articles")).toBeInTheDocument();
   });
 });

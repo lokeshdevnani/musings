@@ -2,7 +2,7 @@ export default {
   id: "08870ea6-bdc8-4ec6-bf72-1e7d4488eb72",
   fields: {
     slug: "/posts/perfecting-the-art-of-perfection",
-    tagsSlugs: ["/handwriting", "/helvetica"],
+    tagSlugs: ["/handwriting", "/helvetica"],
     categorySlug: "/typography",
   },
   frontmatter: {
@@ -12,6 +12,7 @@ export default {
     tags: ["Handwriting", "Helvetica"],
     title: "Perfecting the Art of Perfection",
     template: "post",
+    subTitle: "Beginner motivation for version control",
   },
   html: "<p>An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. The machines of the industrial world finally took over the handicrafts.</p>",
 };

@@ -3,34 +3,64 @@
 
 .feed {
   .item {
-    @include mixins.margin-bottom(1.25);
+    @include mixins.margin-bottom(1);
+    @include mixins.padding-bottom(1);
+    border-bottom: 1px dotted #ccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 
     &:last-child {
       @include mixins.margin-bottom(0.5);
     }
 
+    .imgContainer {
+      align-items: center;
+      border-radius: 10px;
+      display: flex;
+      flex-shrink: 0;
+      justify-content: center;
+      margin-right: 20px;
+      max-height: 132px;
+      overflow: hidden;
+      width: 80px;
+
+      .image {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .titleContainer {
+      flex-grow: 0;
+    }
+
     .title {
-      font-size: variables.$typography-base-font-size * 1.6875;
-      @include mixins.line-height(1.5);
+      font-family: variables.$typography-heading-font-family;
+      font-size: variables.$typography-base-font-size * 1.3;
+      @include mixins.line-height(1);
       @include mixins.margin-top(0);
-      @include mixins.margin-bottom(0.5);
+      @include mixins.margin-bottom(0.3);
 
       .link {
         color: hsl(var(--color-foreground));
 
         &:hover,
         &:focus {
-          border-bottom: 1px solid hsl(var(--color-foreground));
+          border-bottom: 1px solid variables.$color-dark;
           color: hsl(var(--color-foreground));
         }
       }
     }
 
-    .description {
+    .subTitle {
+      font-family: variables.$typography-secondary-font-family;
+      font-size: variables.$typography-base-font-size * 1.2;
+      font-weight: 300;
       color: hsl(var(--color-muted-foreground));
-      font-size: variables.$typography-base-font-size;
-      @include mixins.line-height(1);
-      @include mixins.margin-bottom(0.75);
+      @include mixins.line-height(1.1);
+      @include mixins.margin-top(0);
+      @include mixins.margin-bottom(0);
     }
 
     .meta {
@@ -47,22 +77,29 @@
 
       .category {
         .link {
+          color: hsl(var(--color-secondary));
+          font-size: variables.$typography-small-font-size;
           font-weight: 600;
           text-transform: uppercase;
-          color: hsl(var(--color-primary));
-          font-size: variables.$typography-small-font-size;
+
+          &:hover,
+          &:focus {
+            color: variables.$color-blue;
+          }
         }
       }
     }
+  }
 
-    .more {
-      color: hsl(var(--color-foreground));
-      font-size: variables.$typography-base-font-size;
+  @include mixins.breakpoint-sm {
+    .item {
+      .imgContainer {
+        width: 150px;
+      }
 
-      &:hover,
-      &:focus {
-        border-bottom: 1px solid hsl(var(--color-primary));
-        color: hsl(var(--color-primary));
+      .title {
+        font-size: variables.$typography-base-font-size * 1.5;
+        @include mixins.line-height(1.2);
       }
     }
   }

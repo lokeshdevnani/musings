@@ -1,12 +1,17 @@
 import React from "react";
-import { test, describe, expect } from "bun:test";
+import { describe, expect, test } from "bun:test";
+import { screen } from "@testing-library/react";
 
 import * as mocks from "@/mocks";
 import { Feed } from "@/components/feed";
-import { createSnapshotsRenderer } from "@/utils/render-with-coil-provider";
+import { renderWithCoilProvider } from "@/utils/render-with-coil-provider";
 
 describe("Feed", () => {
-  test("renders correctly", () => {
-    expect(createSnapshotsRenderer(<Feed edges={mocks.edges} />).toJSON()).toMatchSnapshot();
+  test("renders posts with metadata", () => {
+    renderWithCoilProvider(<Feed edges={mocks.edges} />);
+
+    expect(screen.getByText("Perfecting the Art of Perfection")).toBeInTheDocument();
+    expect(screen.getByText("Typography")).toBeInTheDocument();
+    expect(screen.getByText("Beginner motivation for version control")).toBeInTheDocument();
   });
 });

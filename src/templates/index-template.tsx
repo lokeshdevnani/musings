@@ -61,6 +61,10 @@ export const query = graphql`
             title
             date
             slug
+            subTitle
+            cover {
+              absolutePath
+            }
           }
         }
       }
@@ -69,13 +73,13 @@ export const query = graphql`
 `;
 
 export const Head: FC<IndexTemplateProps> = ({ pageContext }) => {
-  const { title, description } = useSiteMetadata();
+  const { title, description, subtitle } = useSiteMetadata();
   const {
     pagination: { currentPage: page },
   } = pageContext;
   const pageTitle = page > 0 ? `Posts - Page ${page} - ${title}` : title;
 
-  return <Meta title={pageTitle} description={description} />;
+  return <Meta title={pageTitle} description={subtitle || description} />;
 };
 
 export default IndexTemplate;

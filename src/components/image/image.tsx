@@ -38,8 +38,8 @@ const Image: FC<ImageProps> = ({ path, ...rest }) => (
         }
       }
     `}
-    render={(data: Data) => {
-      const { images: { edges = [] } = {} } = data;
+    render={(data?: Data) => {
+      const edges = data?.images?.edges ?? [];
       const image = edges.find(({ node }) => node.absolutePath.includes(path));
 
       if (!image) {

@@ -4,6 +4,7 @@ type SiteMetadataAuthor = {
   title: string;
   photo: string;
   description: string;
+  resumeUrl?: string;
   contacts: {
     name: keyof typeof icons;
     contact: string;
@@ -21,9 +22,12 @@ interface SiteMetadata {
       author: SiteMetadataAuthor;
       menu: SiteMetadataMenu;
       description: string;
+      subtitle?: string;
       copyright: string;
       title: string;
       url: string;
+      facebookAppId?: string;
+      feedLimit?: number;
     };
   };
 }
