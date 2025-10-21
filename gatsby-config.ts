@@ -155,10 +155,10 @@ export default {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: config.title,
-        short_name: config.title,
+        short_name: "Lokesh Blog",
         theme_color: "hsl(31, 92%, 62%)",
         background_color: "hsl(0, 0%, 100%)",
-        icon: "content/logo.svg",
+        icon: "content/logo.png",
         display: "standalone",
         start_url: "/",
         icon_options: {

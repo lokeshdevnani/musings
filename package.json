@@ -19,8 +19,8 @@
     "serve": "gatsby serve",
     "release": "semantic-release",
     "clean": "rimraf .cache public",
-    "build": "bun run clean && gatsby build",
-    "start": "bun run clean && gatsby develop",
+    "build": "npm run clean --silent && gatsby build",
+    "start": "npm run clean --silent && gatsby develop",
     "version": "bun ./internal/scripts/up-version.mjs"
   },
   "dependencies": {
