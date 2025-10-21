@@ -75,7 +75,7 @@ const ContactPage: FC = () => {
           </p>
         )}
         <p>
-          Feel free to shoot me an email at <em>contact [at] lokeshd [dot] com</em>
+          Feel free to shoot me an email at <em>lokeshdevnani [at] gmail [dot] com</em>
         </p>
       </Page>
     </Layout>

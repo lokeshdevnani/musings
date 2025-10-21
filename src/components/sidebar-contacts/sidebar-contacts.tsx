@@ -15,11 +15,15 @@ type SidebarContactsProps = {
 };
 
 const SidebarContacts: FC<SidebarContactsProps> = ({ contacts }) => {
+  const visibleContacts = contacts.filter(
+    ({ name }) => name !== "facebook" && name !== "soundcloud",
+  );
+
   return (
-    contacts.length > 0 && (
+    visibleContacts.length > 0 && (
       <div className={styles.sidebarContacts}>
         <ul className={styles.list}>
-          {contacts.map(
+          {visibleContacts.map(
             ({ name, contact }) => (
               <li className={styles.item} key={name}>
                 {name === "email" ? (
