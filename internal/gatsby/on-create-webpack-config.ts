@@ -33,6 +33,63 @@ const onCreateWebpackConfig = (
       outputModule: false,
     };
 
+    // Optimize bundle splitting and tree shaking for production
+    if (stage === "build-javascript") {
+      config.optimization = {
+        ...config.optimization,
+        usedExports: true,
+        sideEffects: false,
+        concatenateModules: true,
+        splitChunks: {
+          chunks: "all",
+          minSize: 20000,
+          maxSize: 244000,
+          cacheGroups: {
+            vendor: {
+              test: /[\\/]node_modules[\\/]/,
+              name: "vendors",
+              chunks: "all",
+              priority: 10,
+            },
+            react: {
+              test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+              name: "react",
+              chunks: "all",
+              priority: 20,
+            },
+            gatsby: {
+              test: /[\\/]node_modules[\\/]gatsby[\\/]/,
+              name: "gatsby",
+              chunks: "all",
+              priority: 15,
+            },
+          },
+        },
+      };
+
+      // Exclude unused code paths and development code
+      config.resolve = {
+        ...config.resolve,
+        fallback: {
+          ...config.resolve?.fallback,
+          fs: false,
+          path: false,
+          crypto: false,
+        },
+      };
+
+      // Exclude development code from production bundles
+      config.plugins = config.plugins?.map((plugin: any) => {
+        if (plugin.constructor.name === 'DefinePlugin') {
+          return new plugin.constructor({
+            ...plugin.definitions,
+            'process.env.NODE_ENV': JSON.stringify('production'),
+          });
+        }
+        return plugin;
+      });
+    }
+
     actions.replaceWebpackConfig(config);
 
     const isBrowserStage =
